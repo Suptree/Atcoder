@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 int main() {
-  int N = 0;
-  int A = 0, B = 0;
+  long long N = 0;
+  long long A = 0, B = 0;
   cin >> N >> A >> B;
 
-  int cycle = N / (A + B);
+  long long cycle = N / (A + B);
 
-  int amari = N % (A + B);
+  long long amari = N % (A + B);
 
   if (cycle == 0) {
     if (N < A) {
@@ -17,6 +17,6 @@ int main() {
     }
     return 0;
   }
-
+  amari = min(amari,A);
   cout << cycle * A + amari << endl;
 }
